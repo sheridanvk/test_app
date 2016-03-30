@@ -1,5 +1,5 @@
-production:
+:production
 Goodreads.configure(
-  api_key: GOODREADS_API_KEY,
-  api_secret: GOODREADS_API_SECRET
+  api_key: ENV['GOODREADS_API_KEY'],
+  api_secret: ENV['GOODREADS_API_SECRET']
 )

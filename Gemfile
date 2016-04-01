@@ -23,8 +23,15 @@ gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
 
-# Add Goodreads gem
+# Add Goodreads API wrapper gem
 gem 'goodreads'
+gem 'oauth'
+gem 'rautomation'
+# Add Amazon Product API gem
+gem 'vacuum'
+
+# Enable logging from all parts of the application
+gem 'logger'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'

@@ -1,0 +1,29 @@
+<h1>These are 20 of the books that I have read</h1>
+
+<% Goodreads.configure(
+  api_key: "7lGMop5la6oNQSZmr8Egg",
+  api_secret: "mbwTyeJmS6Na23DgfxoMX79mKiv2mDddrYubzaN8mQ"
+) %>
+<% client = Goodreads::Client.new(api_key: "7lGMop5la6oNQSZmr8Egg",
+  api_secret: "mbwTyeJmS6Na23DgfxoMX79mKiv2mDddrYubzaN8mQ") %>
+
+<p><%#= Goodreads.configuration %></p>
+
+<% request_token = OAuth::Consumer.new(
+  Goodreads.configuration[:api_key],
+  Goodreads.configuration[:api_secret],
+  site: "http://www.goodreads.com"
+).get_request_token %>
+
+
+<p><%#= request_token.authorize_url %></p>
+
+<%# access_token = request_token.get_access_token
+goodreads_client = Goodreads.new(oauth_token: access_token)
+%>
+
+<% shelf = client.shelf('6112518', 'read') %>
+
+<% shelf.books.each do |item| %>
+    <p><%= item.fetch("book").fetch("title") %></p>
+<% end %>

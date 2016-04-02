@@ -17,4 +17,4 @@
 /tmp
 
 # Ignore API developer key files
-/config/initializers/keys.rb
+/config/initializers/dev_keys.rb

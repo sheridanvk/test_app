@@ -36,6 +36,9 @@ gem 'logger'
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1.7'
 
+# Try out Devise for authentication/user management
+gem 'devise'
+
 # Use Unicorn as the app server
 # gem 'unicorn'
 
